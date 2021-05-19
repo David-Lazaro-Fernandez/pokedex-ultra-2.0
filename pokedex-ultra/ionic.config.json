@@ -1,0 +1,7 @@
+{
+  "name": "pokedex-ultra",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
