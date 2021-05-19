@@ -1,3 +1,23 @@
-<p>
-  poke-news works!
-</p>
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="8">
+      <h3>Pokémon News</h3>
+    </ion-col>
+    <ion-col size="4">
+      <h4><a href="https://www.google.com.mx/search?q=pokemon&source=lnms&tbm=nws&sa=X&ved=2ahUKEwj6ue2vg9HwAhVMbKwKHYcYA1cQ_AUoAnoECAEQBA&biw=1920&bih=969">View all</a></h4>
+    </ion-col>
+
+  </ion-row>
+  <!--Sección de noticias-->
+  <div *ngFor='let news of pokeNews'>
+    <ion-row>
+      <ion-col size="8">
+        <div class="titulo">{{news.title}}</div>
+        <div class="fecha">{{news.publishedAt}}</div>
+      </ion-col>
+      <ion-col size="4">
+        <img src="{{news.urlToImage}}" alt="A picture of the news">
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-grid>

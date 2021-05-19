@@ -1,3 +1,11 @@
-<p>
-  categories works!
-</p>
+<ion-card [ngStyle]="{'background-color': cardColors[colores], 'box-shadow': '0px 10px 10px -1px '+ cardShadow[colores]}">
+  <ion-grid>
+    <ion-row>
+      <span [ngStyle]="{'background-color': secondaryCardColor[colores]}" class="circulo"></span>
+      <ion-col size="12">
+        <h3>Pokedex</h3>
+        <img src='assets/img/pokeball white.png'/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
