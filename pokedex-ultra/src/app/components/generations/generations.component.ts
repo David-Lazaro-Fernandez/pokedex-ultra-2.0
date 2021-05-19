@@ -8,13 +8,15 @@ import {Router} from '@angular/router'
 export class GenerationsComponent implements OnInit {
 
   constructor(private router: Router) { }
+  generation = [];
 
   ngOnInit() {
     console.log("ComponentDidLoad")
   }
 
-  ruta(){
-    
+  updateNumber(gen){
+    this.generation[1] = gen;
   }
+
 
 }

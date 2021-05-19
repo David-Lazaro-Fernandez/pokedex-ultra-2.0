@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { GenerationsPage } from './generations.page';
 import {HomePage} from '../home/home.page';
-
+import {PokedexPage} from '../pokedex/pokedex.page';
 const routes: Routes = [
   {
     path: '',
@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path:'home',
     component: HomePage
+  },
+  {
+    path:'pokedex',
+    component: PokedexPage,
   }
 ];
 

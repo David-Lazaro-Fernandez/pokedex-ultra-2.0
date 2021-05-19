@@ -3,3 +3,187 @@ ion-icon {
     color: #000;
     
 }
+
+ion-card{
+    height: 100px;
+}
+ion-card-title{
+    font-size: 14px;
+    text-align: center;
+}
+
+
+#background{
+    position:fixed;
+    right: -30px;
+    top: 20px;
+    width: 100px;
+    opacity: 0.05;
+}
+
+#grass1{
+    width: 50px;
+    position: fixed;
+    right: 75px;
+}
+
+#fire1{
+    width: 70px;
+    position: fixed;
+    right: 20px;
+    top:35px;
+    z-index: 1;
+}
+
+#water1{
+    width: 50px;
+    position: fixed;
+    right: 0px;
+    transform: scaleX(-1);
+}
+
+#grass2{
+    width: 50px;
+    position: fixed;
+    right: 75px;
+}
+
+#fire2{
+    width: 70px;
+    position: fixed;
+    right: 28px;
+    top:40px;
+    z-index: 1;
+    transform: scaleX(-1);
+}
+
+#water2{
+    width: 50px;
+    position: fixed;
+    right: 0px;
+    transform: scaleX(-1);
+}
+
+#grass3{
+    width: 50px;
+    position: fixed;
+    right: 75px;
+}
+
+#fire3{
+    width: 70px;
+    position: fixed;
+    right: 25px;
+    top:35px;
+    z-index: 1;
+}
+
+#water3{
+    width: 50px;
+    position: fixed;
+    right: 0px;
+    transform: scaleX(-1);
+}
+
+#grass4{
+    width: 50px;
+    position: fixed;
+    right: 75px;
+}
+
+#fire4{
+    width: 70px;
+    position: fixed;
+    right: 30px;
+    top:35px;
+    z-index: 1;
+}
+
+#water4{
+    width: 50px;
+    position: fixed;
+    right: 0px;
+}
+
+#grass5{
+    width: 50px;
+    position: fixed;
+    right: 75px;
+}
+
+#fire5{
+    width: 70px;
+    position: fixed;
+    right:30px;
+    top:35px;
+    z-index: 1;
+}
+
+#water5{
+    width: 50px;
+    position: fixed;
+    right: 0px;
+    transform: scaleX(-1);
+}
+
+#grass6{
+    width: 50px;
+    position: fixed;
+    right: 75px;
+}
+
+#fire6{
+    width: 70px;
+    position: fixed;
+    right: 30px;
+    top:35px;
+    z-index: 1;
+}
+
+#water6{
+    width: 50px;
+    position: fixed;
+    right: 0px;
+}
+
+#grass7{
+    width: 50px;
+    position: fixed;
+    right: 75px;
+}
+
+#fire7{
+    width: 70px;
+    position: fixed;
+    right: 30px;
+    top:35px;
+    z-index: 1;
+}
+
+#water7{
+    width: 50px;
+    position: fixed;
+    right: 0px;
+}
+
+#grass8{
+    width: 50px;
+    position: fixed;
+    right: 75px;
+    top:50px;
+}
+
+#fire8{
+    width: 70px;
+    position: fixed;
+    right: 30px;
+    top:35px;
+    z-index: -11;
+}
+
+#water8{
+    width: 50px;
+    position: fixed;
+    right: 0px;
+    top:50px;
+}
