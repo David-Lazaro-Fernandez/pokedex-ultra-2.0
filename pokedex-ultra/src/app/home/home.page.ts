@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import {Router} from '@angular/router'
+import { Colores } from '../components/categories/categories.component';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor(private router: Router ) {}
+  colores = Colores  
+  ruta(){
+    console.log("Test")
+    this.router.navigate(['/generations'])
+  }
 }

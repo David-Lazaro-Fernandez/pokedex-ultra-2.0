@@ -5,15 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import {CategoriesComponent} from '../components/categories/categories.component';
+import {PokeNewsComponent} from '../components/poke-news/poke-news.component';
+import {SearchBarComponent} from '../components/search-bar/search-bar.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, CategoriesComponent, PokeNewsComponent, SearchBarComponent,]
 })
 export class HomePageModule {}

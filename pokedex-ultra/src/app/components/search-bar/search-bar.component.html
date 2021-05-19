@@ -1,3 +1,11 @@
-<p>
-  search-bar works!
-</p>
+
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="12">
+      <ion-searchbar placeholder="Search Pokemon, moves, etc" inputmode="text" 
+      type="text" (ionChange)="onSearchChange($event)" 
+      [debounce]="250" >
+      </ion-searchbar>    
+    </ion-col>
+  </ion-row>
+</ion-grid>
