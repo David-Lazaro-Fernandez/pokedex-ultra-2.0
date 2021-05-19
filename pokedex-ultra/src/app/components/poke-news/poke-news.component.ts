@@ -8,7 +8,7 @@ import {PokeNewsService} from './poke-news.service';
 })
 export class PokeNewsComponent implements OnInit {
   pokeNews = [];
-  laloCuck = [];
+  
   constructor(
     private http: HttpClientModule,
     private api: PokeNewsService

@@ -12,6 +12,9 @@ export class GenerationsComponent implements OnInit {
   ngOnInit() {
     console.log("ComponentDidLoad")
   }
-  
+
+  ruta(){
+    
+  }
 
 }
