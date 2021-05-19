@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { GenerationsPageRoutingModule } from './generations-routing.module';
 
 import { GenerationsPage } from './generations.page';
+import {GenerationsComponent} from '../components/generations/generations.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { GenerationsPage } from './generations.page';
     IonicModule,
     GenerationsPageRoutingModule
   ],
-  declarations: [GenerationsPage]
+  declarations: [GenerationsPage, GenerationsComponent]
 })
 export class GenerationsPageModule {}

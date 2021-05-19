@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from '@angular/router'
 @Component({
-  selector: 'app-generations',
+  selector: 'generations',
   templateUrl: './generations.component.html',
   styleUrls: ['./generations.component.scss'],
 })
 export class GenerationsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("ComponentDidLoad")
+  }
+  
 
 }
