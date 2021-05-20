@@ -13,7 +13,7 @@ import { switchMap } from 'rxjs/operators';
 export class AuthService {
   public user$: Observable<User>;
 
-  constructor(private afAuth:AngularFireAuth, private afs: AngularFirestore) { 
+  constructor(public afAuth:AngularFireAuth, private afs: AngularFirestore) { 
     this.user$ = this.afAuth.authState.pipe(
       switchMap((user: User) => {
         if (user) {
@@ -31,6 +31,10 @@ export class AuthService {
     } catch(err) { 
       console.log('Error ->', err);
     }
+  }
+
+  isEmailVerified(user:User) {
+    return user.emailVerified;
   }
 
   async resetPassword(email: string): Promise<void> {
