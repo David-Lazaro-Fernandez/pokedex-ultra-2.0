@@ -1,9 +1,560 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>pokedex</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-grid fixed>
+    <!--Botones del encabezado-->
+    <ion-row>
+      <ion-col size="3">
+        <ion-button (click)="ruta()" expand="block" fill="clear" shape="round">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+        
+      </ion-col>
+      <ion-col size="6"></ion-col>
+      <ion-col size="3">
+        <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+          <ion-icon name="options"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
 
+    <!--Pokecards-->
+    <ion-row>
+      <ion-col size="6" *ngFor='let pokemon of pokemonArray'>
+        <div [ngSwitch] = "pokemon.type[0]" >
+
+        <ion-card *ngSwitchCase="'Fire'" style="background-color:#fa8d3e">
+          <!--Nombre, numero y tipos-->
+          <ion-row>
+            <ion-col>
+              <!--Nombre-->
+              <ion-row>
+                <ion-col size="12">
+                  {{pokemon.name}}
+                </ion-col>
+              </ion-row>
+              <!--Numero-->
+              <ion-row>
+                <ion-col size="12"></ion-col>
+              </ion-row>
+              <!--Tipos-->
+              <ion-row *ngFor='let type of pokemon.type'>
+                <ion-col size="12">
+                  <h6 style="background-color: #ffb27a;">{{type}}</h6>
+                </ion-col>
+              </ion-row>
+              
+            </ion-col>
+            <!--Foto del pokemon-->
+            <ion-col>
+              <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+              <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+            </ion-col>  
+          </ion-row>
+          
+        </ion-card>
+        
+        <ion-card *ngSwitchCase="'Water'" style="background-color:#4aa8ff">
+          <!--Nombre, numero y tipos-->
+          <ion-row>
+            <ion-col size="6">
+              <!--Nombre-->
+              <ion-row>
+                <ion-col size="12">
+                  {{pokemon.name}}
+                </ion-col>
+              </ion-row>
+              <!--Numero-->
+              <ion-row>
+                <ion-col size="12"></ion-col>
+              </ion-row>
+              <!--Tipos-->
+              <ion-row *ngFor='let type of pokemon.type'>
+                <ion-col size="12">
+                  <h6 style="background-color: #80c2ff;">{{type}}</h6>
+                </ion-col>
+              </ion-row>
+              
+            </ion-col>
+            <!--Foto del pokemon-->
+            <ion-col size="6">
+              <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+              <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+            </ion-col>  
+          </ion-row>
+          
+        </ion-card>
+
+        <ion-card *ngSwitchCase="'Bug'" style="background-color:#C0DE8E">
+          <!--Nombre, numero y tipos-->
+          <ion-row>
+            <ion-col size="6">
+              <!--Nombre-->
+              <ion-row>
+                <ion-col size="12">
+                  {{pokemon.name}}
+                </ion-col>
+              </ion-row>
+              <!--Numero-->
+              <ion-row>
+                <ion-col size="12"></ion-col>
+              </ion-row>
+              <!--Tipos-->
+              <ion-row *ngFor='let type of pokemon.type'>
+                <ion-col size="12">
+                  <h6 style="background-color: #e1fcb3;">{{type}}</h6>
+                </ion-col>
+              </ion-row>
+              
+            </ion-col>
+            <!--Foto del pokemon-->
+            <ion-col size="6">
+              <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+              <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+            </ion-col>  
+          </ion-row>
+          
+        </ion-card>
+
+        <ion-card *ngSwitchCase="'Dragon'" style="background-color:#692BCF">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #8d56e8;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>  
+          </ion-row>
+          
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Dark'" style="background-color:#373737">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #595959;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>  
+          </ion-row>
+          
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Electric'" style="background-color:#c7ba00">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #d3ca54;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>  
+          </ion-row>
+          
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Fairy'" style="background-color:#FFAFF7">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: ffc4f9;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>  
+          </ion-row>
+          
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Fighting'" style="background-color:#FF5656">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #fc7c7c;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>  
+          </ion-row>
+          
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Flying'" style="background-color:#AED1D9">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #d4f7ff;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>
+          </ion-row>
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Ghost'" style="background-color:#807CB1">
+          <ion-row>
+                     <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #b1acf2;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>
+ 
+          </ion-row>
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Grass'" style="background-color:#46D27E">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #79eda7;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>
+        
+          </ion-row>
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Rock'" style="background-color:#B8A038">
+         <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #d6c167;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>
+         </ion-row>
+        </ion-card>
+
+        <ion-card *ngSwitchCase="'Ground'" style="background-color:#C88555">
+         <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #fab07a;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>
+         </ion-row>
+        </ion-card>
+
+        <ion-card *ngSwitchCase="'Ice'" style="background-color:#89E3FF">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #aeeafc;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>
+          </ion-row>
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Normal'" style="background-color:#A8A090">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #dbd2bf;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>
+          </ion-row>
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Poison'" style="background-color:#BF46D2">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #e47af5;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>
+          </ion-row>
+        </ion-card>
+
+        
+        <ion-card *ngSwitchCase="'Psychic'" style="background-color:#FC62FF">
+          <ion-row>
+            <!--Nombre, numero y tipos-->
+          <ion-col size="6">
+            <!--Nombre-->
+            <ion-row>
+              <ion-col size="12">
+                {{pokemon.name}}
+              </ion-col>
+            </ion-row>
+            <!--Numero-->
+            <ion-row>
+              <ion-col size="12"></ion-col>
+            </ion-row>
+            <!--Tipos-->
+            <ion-row *ngFor='let type of pokemon.type'>
+              <ion-col size="12">
+                <h6 style="background-color: #f896fa;">{{type}}</h6>
+              </ion-col>
+            </ion-row>
+            
+          </ion-col>
+          <!--Foto del pokemon-->
+          <ion-col size="6">
+            <img src="{{pokemon.image}}" alt="A pokemon image" id="pokeImage">
+            <img src="assets/img/pokeball white.png" alt="A white pokeball on the background" id="pokeback">
+          </ion-col>
+          </ion-row>
+        </ion-card>
+      </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
+
