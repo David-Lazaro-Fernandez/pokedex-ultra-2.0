@@ -25,7 +25,6 @@ export class GenerationsPage implements OnInit {
   goToPokedex(generation){
     this.router.navigate(['/pokedex'])
     this.service.setGeneration(generation)
-    console.log(this.service.getGeneration())
   }
 
 }

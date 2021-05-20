@@ -10,42 +10,61 @@ import { GenerationsService } from '../generations/generations.service';
 export class PokedexPage implements OnInit {
   pokemonArray = [];
   limit: number = 0;
+  generations:number;
   constructor(
     private api: PokedexService,
     private genService: GenerationsService,
   ) { }
 
   ngOnInit() {
-    let generation = this.genService.getGeneration();
-    switch(generation){
-      case 1: {
-        this.getGenI();
-      }
-      case 1: {
-        this.getGenI();
-      }
+    this.generations = this.genService.getGeneration();
+    console.log(this.generations)
+    console.log(this.pokemonArray)
+     switch(this.generations){
+       
+       case 1: {
+         console.log("firstGen")
+         this.getGenI();
+         break;
+        
+
+       }
       case 2: {
+         console.log("2Gen")
         this.getGenII();
-      }
-      case 3: {
-        this.getGenIII();
-      }
-      case 4: {
-        this.getGenIV();
-      }
-      case 5: {
-        this.getGenV();
-      }
-      case 6: {
-        this.getGenVI();
-      }
-      case 7: {
-        this.getGenVII();
-      }
-      case 8: {
-        this.getGenVIII();
-      }
-    }
+         break;
+        }
+        case 3: {
+         console.log("3Gen")
+         this.getGenIII();
+         break;
+       }
+       case 4: {
+         console.log("4Gen")
+         this.getGenIV();
+         break;
+       }
+       case 5: {
+         console.log("5Gen")
+         this.getGenV();
+         break;
+       }
+       case 6: {
+         console.log("6Gen")
+         this.getGenVI();
+         break;
+       }
+       case 7: {
+         console.log("7Gen")
+         this.getGenVII();
+         break;
+       }
+       case 8: {
+         console.log("8gen")
+         this.getGenVIII();
+         break;
+       }
+     }
   }
 
   
@@ -71,6 +90,9 @@ export class PokedexPage implements OnInit {
             };
 
             this.pokemonArray.push(pokeData);
+            this.pokemonArray.sort(function (a, b) {
+              return a.position - b.position;
+            });
           },
           (err) =>{
             console.log(err)

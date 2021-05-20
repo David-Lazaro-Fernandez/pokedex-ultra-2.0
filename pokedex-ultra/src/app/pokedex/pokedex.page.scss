@@ -1,0 +1,39 @@
+ion-icon {    
+    color: #0000;
+}
+*{
+    font-size: 10px;
+}
+img{
+    width: 120px;
+    margin-top: 20px;
+    font-family: 'Segoe UI';
+}
+
+ion-col{
+    text-align: center;
+    font-weight: 600;
+    color: #FFFF;
+    font-size: 10px;
+    font-weight: 600;
+}
+h6{
+    margin: 0px;
+    text-align: center;
+    border: 0px;
+    border-radius: 10px;
+    font-family: 'Segoe UI';
+    
+}
+
+ion-card {
+    height: 100px;
+}
+
+#pokeback{
+    position: fixed;
+    top: -20px;
+    width: 100px;
+    opacity: 0.2;
+    right: -20px;
+}

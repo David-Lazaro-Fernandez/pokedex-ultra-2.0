@@ -13,7 +13,6 @@ export class GenerationsService {
   }
 
   getGeneration(){
-    console.log(this.generation)
     return this.generation
   }
 }
