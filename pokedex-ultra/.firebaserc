@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pokedex-ultra": {
+      "hosting": {
+        "app": [
+          "pokedex-ultra"
+        ]
+      }
+    }
+  }
+}
