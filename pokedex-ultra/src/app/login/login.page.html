@@ -1,51 +1,78 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" #email required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" #password required></ion-input>
-    </ion-item>
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" (click)="onLogin(email, password)" expand="block" shape="round">
-          Login
-        </ion-button>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <p>
-          <a routerLink="/forgot-password">Olvidaste tu contraseña?</a>
-        </p>
-      </ion-col>
-    </ion-row>
-
-    <span class="center-span">or</span>
-
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" (click)="onLoginGoogle()" color="danger" expand="block" shape="round">
-          Login with google
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
-
-  <ion-row>
-    <ion-col>
-      <p>
-        <a routerLink="/register">Crear una cuenta</a>
-      </p>
+  <ion-row style="margin-top: 40px;">
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+      <img src="assets/img/login image.png" alt="An image of Snorlax sleeping">
     </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+
+  <!--Inputs-->
+  <ion-row>
+    <ion-col size="12">
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="10">
+          <ion-item>
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input placeholder="Awesome email!" #email required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="10">
+          <ion-item>
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input placeholder="Awesome password!" type="password" #password required></ion-input>
+          </ion-item>
+          <p><a routerLink="/forgot-password"> Forgot?</a></p>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+
+      <!--Login button-->
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="1"></ion-col>
+        <ion-col size="8">
+          <button type="submit" class="login" (click)="onLogin(email, password)">Login</button>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+
+    </ion-col>
+  </ion-row>
+  
+  <!--Or-->
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+      <p style="text-align: center; color:#7386FF;">Or</p>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+
+  <!--Login with Google-->
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="1"></ion-col>
+    <ion-col size="8">
+        <button type="submit" class="login" (click)="onLoginGoogle()" class="google"><span><ion-icon name="logo-google" style="text-align: left; font-size: 20px; color: white;"></ion-icon></span>&nbsp; Login with google</button>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+
+  <!--Don't have an account?-->
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+      <p style="text-align: center; color:#7386FF;" routerLink="/register">Don't have an account? <span style="font-weight: bold;">Register now!</span></p>
+    </ion-col>
+    <ion-col size="1"></ion-col>
   </ion-row>
 </ion-content>

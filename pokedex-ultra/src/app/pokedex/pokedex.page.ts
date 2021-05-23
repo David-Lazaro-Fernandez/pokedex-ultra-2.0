@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PokedexService} from './pokedex.service';
 import { GenerationsService } from '../generations/generations.service';
-
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-pokedex',
   templateUrl: './pokedex.page.html',
@@ -14,6 +14,7 @@ export class PokedexPage implements OnInit {
   constructor(
     private api: PokedexService,
     private genService: GenerationsService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -67,8 +68,11 @@ export class PokedexPage implements OnInit {
      }
   }
 
+  ruta(){
+    console.log("Test")
+    this.router.navigate(['/generations'])
+  }
   
-
   getGenI(){
     let pokeData;
     for (let index = 1; index < 152; index++) {
