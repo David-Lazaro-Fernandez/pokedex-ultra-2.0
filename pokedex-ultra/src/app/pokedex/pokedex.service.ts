@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class PokedexService {
   idOfPokemon: number
+  pokemontype: string
   constructor(private http: HttpClient) { }
   getPokemones(id){
     return  this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -14,8 +15,15 @@ export class PokedexService {
   setPokemonID(pokemonID){
     this.idOfPokemon = pokemonID;
   }
-
   getPokemonID(){
     return this.idOfPokemon;
   }
+  setPokemonType(type){
+    this.pokemontype = type;
+  }
+  getPokemonType(){
+    return this.pokemontype;
+  }
+
+
 }

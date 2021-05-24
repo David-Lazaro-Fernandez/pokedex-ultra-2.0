@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PokedexPage } from './pokedex.page';
 import { GenerationsPage } from '../generations/generations.page'
+import { PokemonPage } from '../pokemon/pokemon.page'
 const routes: Routes = [
   {
     path: '',
@@ -11,7 +12,11 @@ const routes: Routes = [
   {
     path:'generations',
     component: GenerationsPage
-  }
+  },
+  {
+    path:'pokemon',
+    component: PokemonPage
+  },
 ];
 
 @NgModule({

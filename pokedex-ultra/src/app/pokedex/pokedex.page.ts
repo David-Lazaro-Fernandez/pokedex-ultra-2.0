@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PokedexService} from './pokedex.service';
 import { GenerationsService } from '../generations/generations.service';
 import { Router } from '@angular/router'
+import { ThrowStmt } from '@angular/compiler';
 @Component({
   selector: 'app-pokedex',
   templateUrl: './pokedex.page.html',
@@ -197,6 +198,12 @@ export class PokedexPage implements OnInit {
           }
         );     
     }
+  }
+
+  passPokemonIdToService(pokemonId, type){
+    this.router.navigate(['/pokemon'])
+    this.api.setPokemonID(pokemonId);
+    this.api.setPokemonType(type);
   }
 
 

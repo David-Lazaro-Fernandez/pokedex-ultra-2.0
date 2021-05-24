@@ -19,7 +19,7 @@
     <!--Pokecards-->
     <ion-row>
       <ion-col size="6" *ngFor='let pokemon of pokemonArray'>
-        <div [ngSwitch] = "pokemon.type[0]" >
+        <div [ngSwitch] = "pokemon.type[0]" (click)=" passPokemonIdToService(pokemon.position,pokemon.type[0])">
 
         <ion-card *ngSwitchCase="'Fire'" style="background-color:#fa8d3e">
           <!--Nombre, numero y tipos-->
