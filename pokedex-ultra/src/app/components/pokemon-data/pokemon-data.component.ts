@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-pokemon-data',
+  selector: 'Pokemon-data',
   templateUrl: './pokemon-data.component.html',
   styleUrls: ['./pokemon-data.component.scss'],
 })
