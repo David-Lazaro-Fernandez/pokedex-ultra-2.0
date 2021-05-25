@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { PokemonService } from '../../pokemon/pokemon.service'
 @Component({
   selector: 'Pokemon-data',
   templateUrl: './pokemon-data.component.html',
@@ -7,14 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PokemonDataComponent implements OnInit{
   colores = coloresPorTipo
+  pokemonArray = []
+  
+  @Input() tipo = coloresPorTipo.Bug
+  
+  constructor(private pokemonService: PokemonService) { }
+
   ngOnInit(){
-    console.log(this.tipo)
-    console.log(typeof this.tipo)
+    this.pokemonArray = this.pokemonService.getPokemonData()
+    console.log(this.pokemonArray) 
   }
 
-  @Input() tipo = coloresPorTipo.Bug
-
-  constructor() { }
+  
+  
+  
   
 }
 

@@ -1,3 +1,37 @@
 .fondo{
     height: 100%;
 }
+.name{
+    color: #FFFF;
+    text-align: left;
+    font-family: 'Segoe UI';
+    font-size: 32px;
+    font-weight: 700;
+}
+.id-row{
+    text-align: right;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.id{
+    color: #FFFF;
+    text-align: right;
+}
+.tipo{
+    color: #fff;
+    font-weight: 500;
+    background-color: rgba(255,255,255,0.1);
+    padding:5px 20px 5px 20px; 
+    border:0px;
+    border-radius: 20px;
+}
+.pokeball-background{
+    opacity: 0.1;
+
+}
+.pokemon{
+    position: fixed;
+    width: 80%;
+    top:200px;
+    left:40px
+}
