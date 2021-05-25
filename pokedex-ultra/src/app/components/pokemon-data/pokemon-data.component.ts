@@ -15,8 +15,13 @@ export class PokemonDataComponent implements OnInit{
 
   ngOnInit(){
     this.pokemonArray = this.pokemonService.getPokemonData()
+    console.log("Pokemon with stats")
     console.log(this.pokemonArray) 
   }
+
+  // changeStatNames(){
+  //   this.pokemonArray.
+  // }
 
   
   

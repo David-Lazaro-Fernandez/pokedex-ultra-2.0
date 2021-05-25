@@ -38,6 +38,19 @@
     </ion-col>
     <ion-col size="2"></ion-col>    
   </ion-row>
+  <ion-row class="datos">
+    <ion-col size="12">
+      <ion-row>
+        <ion-col size="12">
+          <h2 style="font-size: 28px;font-weight: 700; text-align: center;">About</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor='let estadisticas of pokemon.stats' style="text-align: center; margin-top: 5px;">
+        <ion-col size="4" clas="stat-name">{{estadisticas.stat.name}}</ion-col>
+        <ion-col size="8" class="stat-color" [ngStyle]="{'background-color': colores[tipo]}">{{estadisticas.base_stat}}</ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 </div>
 
 

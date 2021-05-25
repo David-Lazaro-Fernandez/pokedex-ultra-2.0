@@ -91,6 +91,7 @@ export class PokedexPage implements OnInit {
               type: res.types.map((index) => {
                 return (index.type.name.charAt(0).toUpperCase() + index.type.name.slice(1));
               }),
+              stats: res.stats,
               //type: res.types[0].type.name,
             };
 
