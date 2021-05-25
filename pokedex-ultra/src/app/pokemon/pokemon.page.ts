@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PokedexService } from '../pokedex/pokedex.service';
-import { coloresPorTipo } from '../components/pokemon-data/pokemon-data.component';
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.page.html',
@@ -11,8 +10,10 @@ export class PokemonPage implements OnInit {
   type: string = this.pokedex.getPokemonType();
 
   constructor(private pokedex: PokedexService) { }
-  color = coloresPorTipo
   ngOnInit() {
+    console.log(this.id)
+    console.log(this.type)
+  
   }
 
 }

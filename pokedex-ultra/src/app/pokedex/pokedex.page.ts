@@ -204,6 +204,8 @@ export class PokedexPage implements OnInit {
     this.router.navigate(['/pokemon'])
     this.api.setPokemonID(pokemonId);
     this.api.setPokemonType(type);
+    console.log(pokemonId)
+    console.log(type)
   }
 
 
