@@ -5,7 +5,7 @@ import * as firebase from 'firebase/app';
 
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { map, switchMap, take, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -16,13 +16,43 @@ export class AuthService {
   constructor(public afAuth:AngularFireAuth, private afs: AngularFirestore) { 
     this.user$ = this.afAuth.authState.pipe(
       switchMap((user: User) => {
+        //this.afAuth.currentUser.then(user => console.log(user.displayName))
+        console.log(user);
+        
         if (user) {
-          return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
+          const currUser: User = {
+            uid: user.uid,
+            email: user.email,
+            displayName: user.displayName,
+            emailVerified: user.emailVerified,
+          };
+          return of(currUser);
         }
 
         return of(null); 
       })
     )
+
+    /*
+    this.afAuth.onAuthStateChanged((user) => {
+      if (user){
+        console.log(user);
+        const currUser: User = {
+          uid: user.uid,
+          email: user.email,
+          displayName: user.displayName,
+          emailVerified: user.emailVerified,
+        };
+        console.log(currUser)
+        console.log(this.user$)
+        this.user$.pipe(
+          map(user => console.log('fuck')),
+          tap(user => console.log('fuck'))
+        )
+      } else {
+        console.log('muerto');
+      }
+    })*/
   }
 
   async sendVerificationEmail(): Promise<void> {
@@ -67,6 +97,7 @@ export class AuthService {
 
   async logout(): Promise<void> {
     try {
+      console.log('logout');
       await this.afAuth.signOut;
     } catch(err) { 
       console.log('Error ->', err);
