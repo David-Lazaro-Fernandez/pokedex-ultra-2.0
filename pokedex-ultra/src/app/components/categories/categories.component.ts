@@ -10,6 +10,14 @@ export class CategoriesComponent {
   @Input() colores = Colores.amarillo
   @Input() colorSecundario = Colores.amarillo
 
+  text = {
+    [Colores.rojo] : "Trainer card",
+    [Colores.azul] : "My favorites",
+    [Colores.amarillo] : "Pokedex",
+    [Colores.verde] : "Pokeapps",
+    [Colores.naranja] : "Music",
+    [Colores.morado] : "Buy cards"
+  }
   secondaryCardColor = {
     [Colores.rojo] : "#f98b7e",
     [Colores.azul] : "#71bffc",
