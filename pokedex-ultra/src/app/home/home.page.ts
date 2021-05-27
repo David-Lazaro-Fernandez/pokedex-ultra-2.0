@@ -14,4 +14,8 @@ export class HomePage {
     console.log("Test")
     this.router.navigate(['/generations'])
   }
+
+  trainerCard() {
+    this.router.navigate(['/trainer-card'])
+  }
 }
