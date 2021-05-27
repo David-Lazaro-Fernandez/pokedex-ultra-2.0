@@ -27,6 +27,7 @@
 }
 .pokeball-background{
     opacity: 0.1;
+    margin-top: 10px;
 
 }
 .pokemon{
@@ -34,4 +35,29 @@
     width: 80%;
     top:200px;
     left:40px
+}
+
+.datos{
+    background-color: #fff;
+    border: 0px;
+    border-radius: 30px 30px 0px 0px;
+    position: fixed;
+    top: 480px;
+    width: 100%;
+}
+.stat-name{
+    display: -webkit-box;
+    -webkit-line-clamp: 0.5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.stat-color{
+    border: 0px;
+    color: #fff;
+    font-weight: 500; 
+    border:0px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
